@@ -1,0 +1,120 @@
+* {
+    font-family: Cursive, Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 25px;
+    display: grid;
+    justify-content: center;
+    background: linear-gradient(90deg, #395492, #0099c0, #3dd5a8);
+}
+
+.container {
+    margin: 25px 0 25px 0;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 0.3vh;
+    border-radius: 0.6vh;
+    background: rgba(1, 8, 89, 0.5);
+    color: white;
+    width: 90vw;
+    filter: drop-shadow(-20px 0 10px rgba(0, 0, 0));
+}
+
+.buttons {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.list {
+    padding: 15px 0 15px 50px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red {
+    color: rgb(207, 7, 7);
+}
+
+.blue {
+    color: rgb(125, 125, 231);
+}
+
+.green {
+    color: rgb(57, 187, 57);
+}
+
+.hide {
+    display: none;
+}
+
+.input {
+    padding: 10px;
+    background: rgb(236, 234, 234);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-left: 20px;
+    outline: none;
+}
+
+li {
+    cursor: pointer;
+}
+
+a {
+    color: rgb(218, 207, 207);
+    cursor: pointer;
+}
+
+@keyframes size {
+
+    0%{
+        font-size: 16px;
+    } 0.1% {
+        font-size: 18px;
+    }
+
+}
+
+a:hover {
+    /* position: absolute; */
+    animation: 100s running linear 0s infinite size;
+}
+
+.btn-11 {
+    background: rgba(47, 57, 163, 0.5);
+    font-size: 25px;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 0 9px 10px rgb(29, 29, 29);
+    transition: all .2s;
+    padding: 20px 25px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    margin:0 20px;
+}
+  
+.btn-11:active {
+    top: 3px;
+    box-shadow: 0 3px 10px rgb(29, 29, 29);
+    transition: all .2s;
+}
+
+.border-right {
+    border: white ridge 2px;
+    border-style: none ridge none none;
+}
+
+div {
+    min-height: 23px;
+}
