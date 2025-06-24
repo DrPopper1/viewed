@@ -42,42 +42,20 @@ function list() {
     console.log(localStorage.getItem('saved'));
 }
 
-const add = document.querySelector(".add");
-
-add.addEventListener('click', function() {
+function add(t) {
     let answer = prompt("Как называется аниме?");
     if (answer == "" || answer == null) {
         return;
     } else {
-        let answer2 = prompt("1 - запланировано, 2 - смотрю, 3 - просмотрено");
-        answer2 = parseInt(answer2, 10);
-        if (answer2 == 1) {
-            let newItem = {
-                value: answer.trim(),
-                type: 1
-            };
-            data.push(newItem);
-            localStorage.setItem('saved', JSON.stringify(data));
-            list();
-        } else if (answer2 == 2) {
-            let newItem = {
-                value: answer.trim(),
-                type: 2
-            };
-            data.push(newItem);
-            localStorage.setItem('saved', JSON.stringify(data));
-            list();
-        } else if (answer2 == 3) {
-            let newItem = {
-                value: answer.trim(),
-                type: 3
-            };
-            data.push(newItem);
-            localStorage.setItem('saved', JSON.stringify(data));
-            list();
-        }
+        let newItem = {
+            value: answer.trim(),
+            type: t
+        };
+        data.push(newItem);
+        localStorage.setItem('saved', JSON.stringify(data));
+        list();
     }
-});
+}
 
 const input = document.querySelector('input');
 
@@ -93,6 +71,7 @@ input.addEventListener('input', function() {
                     list[i].classList.remove('hide');
                 }
             }
+            console.log(value);
         }
     } else {
         for(let i = 0; i < list.length; i++) {
